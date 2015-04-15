@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="Free images, more appearing every now and then.">
+		<meta name="author" content="Ross Phillips">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+		<title>Gallery</title>
+
+		<link rel="stylesheet" href="/css/main.css">
+		<link rel="icon" type="image/png" href="/images/favicon.png">
+
+		<script src="/scripts/masonry.pkgd.min.js"></script>
+		<script src="/scripts/imagesloaded.pkgd.min.js"></script>
+	</head>
+
+	<body>
+		<header>
+			<h1>Gallery</h1>
+		</header>
+
+		<p class="hero">
+			Free images, more appearing every now and then.
+		</p>
+
+		<div id="gallery" class="gallery-list js-masonry">
+			<a class="gallery-item" href="/pictures/aramoana.html">
+				<img class="gallery-item-image" src="/images/aramoana.jpg" alt="Aramoana Glory">
+				<p class="gallery-item-text">Aramoana Glory</p>
+			</a>
+
+			<a class="gallery-item" href="/pictures/crystalls-beach.html">
+				<img class="gallery-item-image" src="/images/crystalls-beach.jpg" alt="Crystalls Beach">
+				<p class="gallery-item-text">Crystalls Beach</p>
+			</a>
+
+			<a class="gallery-item" href="/pictures/otago-uni.html">
+				<img class="gallery-item-image" src="/images/otago-uni.jpg" alt="Otago University">
+				<p class="gallery-item-text">Otago University</p>
+			</a>
+
+			<a class="gallery-item" href="/pictures/sandfly-bay.html">
+				<img class="gallery-item-image" src="/images/sandfly-bay.jpg" alt="Sandfly Bay">
+				<p class="gallery-item-text">Sandfly Bay</p>
+			</a>
+
+			<a class="gallery-item" href="/pictures/tunnel-beach.html">
+				<img class="gallery-item-image" src="/images/tunnel-beach.jpg" alt="Tunnel Beach">
+				<p class="gallery-item-text">Tunnel Beach</p>
+			</a>
+
+			<a class="gallery-item" href="/pictures/victory-beach-pyramids.html">
+				<img class="gallery-item-image" src="/images/victory-beach-pyramids.jpg" alt="Victory Beach Pyramids">
+				<p class="gallery-item-text">Victory Beach Pyramids</p>
+			</a>
+
+			<a class="gallery-item" href="/pictures/waipori-falls.html">
+				<img class="gallery-item-image" src="/images/waipori-falls.jpg" alt="Waipori Falls">
+				<p class="gallery-item-text">Waipori Falls</p>
+			</a>
+		</div>
+
+		<script>
+			var gallery = document.querySelector("#gallery"),
+				masonry = new Masonry(gallery, {
+					itemSelector: ".gallery-item",
+					isFitWidth: true,
+					transitionDuration: 0
+				});
+
+			imagesLoaded(gallery, function () {
+				masonry.layout();
+			});
+		</script>
+
+	</body>
+</html>
