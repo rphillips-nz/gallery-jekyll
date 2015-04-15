@@ -4,4 +4,13 @@ description: Free images, more appearing every now and then.
 baseurl: "" # the subpath of your site, e.g. /gallery/
 
 collections:
-  - pictures
+  pictures:
+    output: true
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: pictures
+    values:
+      layout: picture
