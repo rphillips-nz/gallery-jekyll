@@ -8,40 +8,12 @@ title: Gallery
 </p>
 
 <div id="gallery" class="gallery-list js-masonry">
-	<a class="gallery-item" href="/pictures/aramoana.html">
-		<img class="gallery-item-image" src="/images/aramoana.jpg" alt="Aramoana Glory">
-		<p class="gallery-item-text">Aramoana Glory</p>
-	</a>
-
-	<a class="gallery-item" href="/pictures/crystalls-beach.html">
-		<img class="gallery-item-image" src="/images/crystalls-beach.jpg" alt="Crystalls Beach">
-		<p class="gallery-item-text">Crystalls Beach</p>
-	</a>
-
-	<a class="gallery-item" href="/pictures/otago-uni.html">
-		<img class="gallery-item-image" src="/images/otago-uni.jpg" alt="Otago University">
-		<p class="gallery-item-text">Otago University</p>
-	</a>
-
-	<a class="gallery-item" href="/pictures/sandfly-bay.html">
-		<img class="gallery-item-image" src="/images/sandfly-bay.jpg" alt="Sandfly Bay">
-		<p class="gallery-item-text">Sandfly Bay</p>
-	</a>
-
-	<a class="gallery-item" href="/pictures/tunnel-beach.html">
-		<img class="gallery-item-image" src="/images/tunnel-beach.jpg" alt="Tunnel Beach">
-		<p class="gallery-item-text">Tunnel Beach</p>
-	</a>
-
-	<a class="gallery-item" href="/pictures/victory-beach-pyramids.html">
-		<img class="gallery-item-image" src="/images/victory-beach-pyramids.jpg" alt="Victory Beach Pyramids">
-		<p class="gallery-item-text">Victory Beach Pyramids</p>
-	</a>
-
-	<a class="gallery-item" href="/pictures/waipori-falls.html">
-		<img class="gallery-item-image" src="/images/waipori-falls.jpg" alt="Waipori Falls">
-		<p class="gallery-item-text">Waipori Falls</p>
-	</a>
+	{% for picture in site.pictures %}
+		<a class="gallery-item" href="{{ picture.url | prepend: site.baseurl }}">
+			<img class="gallery-item-image" src="{{ picture.image_path }}" alt="{{ picture.title }}">
+			<p class="gallery-item-text">{{ picture.title }}</p>
+		</a>
+	{% endfor %}
 </div>
 
 <script>
